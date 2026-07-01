@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x1<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -712,9 +712,10 @@ async function play(i){
   idx=i;paused=false;now=cola[i];
   const ck_=k(now.a,now.t);
   if(!mc[ck_])await getMeta(now.a,now.t);
-  updMP();updFP();
+updMP();updFP();
   $('mp').classList.add('on');
   setupMediaSession();
+  updMediaSession(); // <--- Añadido
   try{
     const vid=await ytSearch(now.a,now.t);
     if(!vid)throw 0;
@@ -800,7 +801,6 @@ function updMediaSession(){
   });
   navigator.mediaSession.playbackState = paused ? 'paused' : 'playing';
 }
-
 function closePlayer(){
   $('mp').classList.remove('on');$('fp').classList.remove('on');
   if(ytPlayer&&ytPlayer.stopVideo)ytPlayer.stopVideo();
@@ -861,8 +861,7 @@ function onPlayerStateChange(e){
     startProg();
     const PA='<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
     $('mp-ico').innerHTML=PA;$('fp-ico').innerHTML=PA;
-    updMediaSession();
-    if('mediaSession' in navigator) navigator.mediaSession.playbackState='playing';
+    updMediaSession(); // Asegúrate de que esto esté aquí
   }
   if(e.data===2){
     paused=true;
