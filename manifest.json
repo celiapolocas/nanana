@@ -1,0 +1,53 @@
+{
+  "name": "nanana · Radio 3",
+  "short_name": "nanana",
+  "id": "/nanana/",
+  "description": "Playlist diaria de Nanana con Leyre Guerrero en Radio 3. Descubre y escucha todas las canciones del programa.",
+  "start_url": "/nanana/",
+  "scope": "/nanana/",
+  "display": "standalone",
+  "background_color": "#EDEAE3",
+  "theme_color": "#EDEAE3",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["music", "entertainment"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Pantalla principal de nanana"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
